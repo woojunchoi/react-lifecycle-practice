@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import 'whatwg-fetch';
 import axios from 'axios'
-
+import Test from './test'
 class App extends Component {
 
   constructor(props) {
@@ -31,14 +31,18 @@ class App extends Component {
       })
   }
 
+  componentWillMount() {
+    console.log('1')
+  }
   componentDidMount() {
+    console.log('2')
     this.loadPokemon(`${this.props.baseUrl}/pokemon/`);
   }
 
   render() {
     return (
       <div>
-          <h2></h2>
+          <Test count = {this.state.count} />
       </div>
     );
   }
