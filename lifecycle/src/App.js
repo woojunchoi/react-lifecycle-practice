@@ -9,9 +9,9 @@ class App extends Component {
     super(props);
 
     this.state = {
-      pokemon: []
+      pokemon: [],
+      count:0
     };
-
   }
   
   loadPokemon = (url) => {
